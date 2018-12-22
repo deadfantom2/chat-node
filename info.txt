@@ -1,0 +1,14 @@
+1) Back
+    npm i socket.io --save
+    Dans app.js ajouter =>
+        const server        = require('http').createServer(app);
+        const io            = require('socket.io').listen(server);
+    Créer dossier socket et dedans créer streams.js
+
+2) Front
+    npm i socket.io-client --save
+    Dans post-form.component.ts
+    Ajouter:
+              import io from 'socket.io-client';            dans library
+              socket: any;                                  declaration var
+              this.socket = io('http://localhost:3000');    dans constructor
